@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TimePass</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111; /* Dark black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 600px;
+    background: #000; /* Black chat background */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.3);
+    overflow: hidden;
+  }
+
+  /* Header */
+  .chat-header {
+    background: #b30000; /* Dark red */
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  /* Chat area */
+  .chat-messages {
+    flex: 1;
+    padding: 12px;
+    overflow-y: auto;
+    background: #1a1a1a; /* Very dark gray */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Message wrapper */
+  .message-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    max-width: 80%;
+  }
+
+  .message-row.sent {
+    margin-left: auto;
+    flex-direction: row-reverse;
+  }
+
+  /* Profile circle */
+  .profile {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    border: 2px solid red;
+  }
+
+  /* Bubble */
+  .message {
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    position: relative;
+    color: white;
+  }
+
+  .received .message {
+    background: #262626; /* Dark gray for received */
+    border: 1px solid #ff0000; /* Bright red outline */
+  }
+
+  .sent .message {
+    background: #b30000; /* Dark red for sent */
+    border: 1px solid #ff4d4d;
+  }
+
+  /* Sender name */
+  .sender {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 3px;
+    color: #ff4d4d; /* Light red */
+  }
+
+  /* Input area */
+  .chat-input {
+    display: flex;
+    border-top: 1px solid #ff0000;
+    padding: 8px;
+    background: #0d0d0d;
+  }
+
+  .chat-input input {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    background: #262626;
+    color: white;
+    outline: none;
+  }
+
+  .chat-input button {
+    background: #ff0000;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .chat-input button:hover {
+    background: #cc0000; /* Darker red on hover */
+  }
+</style>
+</head>
+<body>
+
+<div class="chat-container">
+  <div class="chat-header">Friends Group</div>
+  
+  <div class="chat-messages">
+    <div class="message-row received">
+      <div class="profile" style="background-image:url('https://via.placeholder.com/35x35?text=A');"></div>
+      <div>
+        <div class="sender">Alice</div>
+        <div class="message">Hey everyone!</div>
+      </div>
+    </div>
+
+    <div class="message-row sent">
+      <div class="profile" style="background-image:url('https://via.placeholder.com/35x35?text=Y');"></div>
+      <div>
+        <div class="sender">You</div>
+        <div class="message">Hi</div>
+      </div>
+    </div>
+
+    <div class="message-row received">
+      <div class="profile" style="background-image:url('https://via.placeholder.com/35x35?text=B');"></div>
+      <div>
+        <div class="sender">Bob</div>
+        <div class="message">behferuhfihrfjfjrkjf</div>
+      </div>
+    </div>
+
+    <div class="message-row sent">
+      <div class="profile" style="background-image:url('https://via.placeholder.com/35x35?text=Y');"></div>
+      <div>
+        <div class="sender">You</div>
+        <div class="message">what?</div>
+      </div>
+    </div>
+
+    <div class="message-row received">
+      <div class="profile" style="background-image:url('https://via.placeholder.com/35x35?text=C');"></div>
+      <div>
+        <div class="sender">Charlie</div>
+        <div class="message">oieioieoeioieieoi</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-input">
+    <input type="text" placeholder="Type a message...">
+    <button>Send</button>
+  </div>
+</div>
+
+</body>
+</html>
